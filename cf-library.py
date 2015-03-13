@@ -61,7 +61,8 @@ class Book(object):
         shelf.books.append(self)
 
     def unshelf(self):
-        if self in self.shelf.books: self.shelf.books.remove(self)
+        if self in self.shelf.books:
+            self.shelf.books.remove(self)
         self.library.unshelved_books.append(self)
         self.shelf = "unshelved"
 
